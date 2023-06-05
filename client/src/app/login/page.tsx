@@ -1,12 +1,21 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { API_URL } from '@/constants/index';
+import { AuthContext, UserInfo } from '@/modules/auth_provider';
 
 const Index = () => {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { authenticated } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (authenticated) {
+      router.push('/');
+      return;
+    }
+  }, []);
 
   const submitHdandler = async (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -19,7 +28,7 @@ const Index = () => {
       });
       const data = await res.json();
       if (res.ok) {
-        const user = {
+        const user: UserInfo = {
           username: data.username,
           id: data.id,
         };

@@ -1,5 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
+import AuthContextProvider from '@/modules/auth_provider';
+import WebSocketProvider from '@/modules/websocket_provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,9 +18,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col md:flex-row h-full min-h-screen font-sans">
-          {children}
-        </div>
+        <AuthContextProvider>
+          <WebSocketProvider>
+            <div className="flex flex-col md:flex-row h-full min-h-screen font-sans">
+              {children}
+            </div>
+          </WebSocketProvider>
+        </AuthContextProvider>
       </body>
     </html>
   );
