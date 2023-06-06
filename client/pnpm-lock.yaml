@@ -13,6 +13,9 @@ dependencies:
   autoprefixer:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.24)
+  autosize:
+    specifier: ^6.0.1
+    version: 6.0.1
   eslint:
     specifier: 8.42.0
     version: 8.42.0
@@ -42,6 +45,9 @@ dependencies:
     version: 9.0.0
 
 devDependencies:
+  '@types/autosize':
+    specifier: ^4.0.1
+    version: 4.0.1
   '@types/uuid':
     specifier: ^9.0.1
     version: 9.0.1
@@ -285,6 +291,10 @@ packages:
       tslib: 2.5.3
     dev: false
 
+  /@types/autosize@4.0.1:
+    resolution: {integrity: sha512-iPJT/FCaSO79G6j+9n6gmFc5nhxZ1gDrA2UAvb5FslJ6FJQZnDfbBU0qp5vpp0Cbjj7+gOyjuWZ7RrXvRuETaA==}
+    dev: true
+
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: false
@@ -513,6 +523,10 @@ packages:
       picocolors: 1.0.0
       postcss: 8.4.24
       postcss-value-parser: 4.2.0
+    dev: false
+
+  /autosize@6.0.1:
+    resolution: {integrity: sha512-f86EjiUKE6Xvczc4ioP1JBlWG7FKrE13qe/DxBCpe8GCipCq2nFw73aO8QEBKHfSbYGDN5eB9jXWKen7tspDqQ==}
     dev: false
 
   /available-typed-arrays@1.0.5:

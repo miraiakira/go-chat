@@ -12,14 +12,14 @@ export const AuthContext = createContext<{
   user: UserInfo;
   setUser: (user: UserInfo) => void;
 }>({
-  authenticated: true,
+  authenticated: false,
   setAuthenticated: () => {},
   user: { username: '', id: '' },
   setUser: () => {},
 });
 
 const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const [authenticated, setAuthenticated] = useState(true);
+  const [authenticated, setAuthenticated] = useState(false);
   const [user, setUser] = useState<UserInfo>({ username: '', id: '' });
 
   const router = useRouter();

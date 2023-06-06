@@ -13,6 +13,7 @@
     "@types/react": "18.2.8",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
+    "autosize": "^6.0.1",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
     "next": "13.4.4",
@@ -24,6 +25,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@types/autosize": "^4.0.1",
     "@types/uuid": "^9.0.1"
   }
 }
